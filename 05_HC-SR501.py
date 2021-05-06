@@ -8,3 +8,4 @@ def threhold(pin):
         print('Alarm!', i)
         i = i+1
 SR501.irq(trigger=Pin.IRQ_RISING , handler=threhold)
+#test
