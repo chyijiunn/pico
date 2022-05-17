@@ -38,6 +38,9 @@
 	2. 真路口設計
 		+ RRRGYRRRRGYR
 		+ GYRRRRGYRRRR
-
+# Motor Control
+1. 完成一個夾頭
+1. 使用按鈕控制夾頭開關
+1. 使用兩個按鈕控制角度增加與減少
 
 
