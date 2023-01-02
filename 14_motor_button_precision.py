@@ -28,4 +28,3 @@ while True:
             angle = -5
         servo(angle)
         sleep(0.1)
-
