@@ -11,6 +11,6 @@ while True:
     oled.fill(0)
     current_time = rtc.datetime()
     print('Time: {:02d}:{:02d}:{:02d}'.format(current_time[4], current_time[5], current_time[6]))
-    oled.text('Time: {:02d}:{:02d}:{:02d}',0,0)
+    oled.text('Time: {:02d}:{:02d}:{:02d}'.format(current_time[4], current_time[5], current_time[6]),0,0)
     oled.show()
     sleep(1)
