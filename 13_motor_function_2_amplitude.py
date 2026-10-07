@@ -1,0 +1,23 @@
+from machine import Pin ,PWM
+from utime import sleep
+servoPIN = PWM(Pin(16))
+servoPIN.freq(50)
+amplitude = 30
+every_degree = 1
+duration = 0.013
+def servo(degrees):
+    if degrees > 90: degrees=90
+    if degrees < -90: degrees=-90
+    maxDuty=9000
+    minDuty=1000
+    newDuty=((maxDuty+minDuty)/2)+(((maxDuty-minDuty)/2)*(degrees/90))
+    #print(degrees,'--->',int(newDuty))
+    servoPIN.duty_u16(int(newDuty))
+
+while 1:
+    for i in range(-amplitude,amplitude,every_degree):
+        servo(i)
+        sleep(duration)
+    for i in range(amplitude,-amplitude,-every_degree):
+        servo(i)
+        sleep(duration)
